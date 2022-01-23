@@ -16,9 +16,9 @@ jobs:
         run: |
           exit 1
       - name: Notify
-        if: always()
+        if: failure()
         uses: dojineko/slack-notify@v1
         with:
           job_status: ${{ job.status }}
           slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
-          suffix_for_failure: "検出!! @ryuichi1208"
+          suffix_for_failure: @ryuichi1208

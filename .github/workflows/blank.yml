@@ -21,4 +21,4 @@ jobs:
         with:
           job_status: ${{ job.status }}
           slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
-          suffix_for_failure: "test failed!!"
+          suffix_for_failure: "検出!! @ryuichi1208"

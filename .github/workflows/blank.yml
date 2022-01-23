@@ -16,3 +16,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Notify
+        if: always()
+        uses: dojineko/slack-notify@v1
+        with:
+          job_status: ${{ job.status }}
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
